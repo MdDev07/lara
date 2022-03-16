@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test/{id}', function ($id) {
-    return 'welcome'.$id;
+    return 'welcome with git'.$id;
 });
 
 
