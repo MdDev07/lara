@@ -23,5 +23,6 @@
             <td>{{ $student->address }}</td>
         </tr>
  
+        
     </table>
 @endsection
