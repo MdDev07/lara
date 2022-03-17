@@ -40,3 +40,4 @@ Route::group(['namespace' => 'App\Http\Controllers\Front'], function()
 
 Route::resource('student','App\Http\Controllers\StudentController');
 
+/*comment test*/ 
