@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 
 
@@ -35,4 +36,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Front'], function()
     Route::get('users/', 'UserController@Showusername');
     Route::get('users2/', 'UserController@Showusername2');
 });
+
+
+Route::resource('student','App\Http\Controllers\StudentController');
 
