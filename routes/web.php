@@ -41,3 +41,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Front'], function()
 Route::resource('student','App\Http\Controllers\StudentController');
 
 /*comment test*/ 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
