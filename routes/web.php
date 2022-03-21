@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,14 +13,14 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
+/*
 
 Route::get('/test/{id}', function ($id) {
     return 'welcome with git'.$id;
-});
+});*/
 
 
 /* Route::get('users/', 'App\Http\Controllers\Front\UserController@Showusername');
@@ -41,6 +39,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Front'], function()
 Route::resource('student','App\Http\Controllers\StudentController');
 
 /*comment test*/ 
-Auth::routes();
+Auth::routes(['verify'=>true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
